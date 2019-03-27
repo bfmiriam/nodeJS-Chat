@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 var request = require('request');
-//var request2 = require('request');
+
 
 
 // inicializamos la conexion con firebase
@@ -27,7 +27,6 @@ var API_KEY = "API_KEY";
 
 function listenForNotificationRequests() {
   var requests = ref.child('usuarios');
-//  var requests2 = ref.child('mensajes');
 
 
   requests.on('child_added', function(requestSnapshot) {
